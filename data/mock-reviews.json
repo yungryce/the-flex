@@ -1,0 +1,230 @@
+[
+  {
+    "id": 1001,
+    "reservationId": 5001,
+    "guestName": "Sarah Johnson",
+    "publicReview": "Amazing property! The location was perfect and the apartment was spotlessly clean. Host was very responsive and helpful throughout our stay.",
+    "privateReview": "Everything was perfect, no issues at all.",
+    "reply": "Thank you Sarah! We're thrilled you enjoyed your stay. Hope to host you again soon!",
+    "rating": 9.5,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 10 },
+      { "categoryName": "Communication", "categoryValue": 10 },
+      { "categoryName": "Location", "categoryValue": 9 },
+      { "categoryName": "Value", "categoryValue": 9 }
+    ],
+    "submittedAt": "2024-12-15 14:30:00",
+    "replyTime": "2024-12-16 09:15:00",
+    "status": "published",
+    "type": "guest-to-host"
+  },
+  {
+    "id": 1002,
+    "reservationId": 5002,
+    "guestName": "Michael Chen",
+    "publicReview": "Great guest! Left the apartment in excellent condition and followed all house rules. Would welcome back anytime.",
+    "privateReview": null,
+    "reply": null,
+    "rating": 10,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 10 },
+      { "categoryName": "Communication", "categoryValue": 10 },
+      { "categoryName": "House Rules", "categoryValue": 10 }
+    ],
+    "submittedAt": "2024-12-14 10:20:00",
+    "replyTime": null,
+    "status": "published",
+    "type": "host-to-guest"
+  },
+  {
+    "id": 1003,
+    "reservationId": 5003,
+    "guestName": "Emma Rodriguez",
+    "publicReview": "Nice place overall, but had some minor issues with the heating. Location is convenient for downtown.",
+    "privateReview": "Heating thermostat was difficult to adjust.",
+    "reply": "Thanks for your feedback Emma. We've had the heating system serviced based on your comments.",
+    "rating": 7.5,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 8 },
+      { "categoryName": "Communication", "categoryValue": 9 },
+      { "categoryName": "Location", "categoryValue": 9 },
+      { "categoryName": "Value", "categoryValue": 7 },
+      { "categoryName": "Amenities", "categoryValue": 6 }
+    ],
+    "submittedAt": "2024-12-13 16:45:00",
+    "replyTime": "2024-12-14 11:30:00",
+    "status": "published",
+    "type": "guest-to-host"
+  },
+  {
+    "id": 1004,
+    "reservationId": 5004,
+    "guestName": "David Park",
+    "publicReview": "Wonderful guest, very respectful and communicative. Apartment was left in pristine condition.",
+    "privateReview": null,
+    "reply": null,
+    "rating": 9.8,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 10 },
+      { "categoryName": "Communication", "categoryValue": 10 },
+      { "categoryName": "House Rules", "categoryValue": 9.5 }
+    ],
+    "submittedAt": "2024-12-12 09:00:00",
+    "replyTime": null,
+    "status": "published",
+    "type": "host-to-guest"
+  },
+  {
+    "id": 1005,
+    "reservationId": 5005,
+    "guestName": "Lisa Thompson",
+    "publicReview": "Beautiful apartment with stunning views! Everything was as described. The kitchen was well-equipped and the bed was very comfortable.",
+    "privateReview": "Minor issue: wifi password wasn't in the welcome guide, had to ask host.",
+    "reply": "Thank you Lisa! We've updated our welcome guide to include the wifi details prominently.",
+    "rating": null,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 9 },
+      { "categoryName": "Communication", "categoryValue": 8 },
+      { "categoryName": "Location", "categoryValue": 10 },
+      { "categoryName": "Value", "categoryValue": 9 },
+      { "categoryName": "Amenities", "categoryValue": 9 }
+    ],
+    "submittedAt": "2024-12-11 18:20:00",
+    "replyTime": "2024-12-12 08:00:00",
+    "status": "published",
+    "type": "guest-to-host"
+  },
+  {
+    "id": 1006,
+    "reservationId": 5006,
+    "guestName": "James Wilson",
+    "publicReview": "Decent stay but felt a bit overpriced for what was offered. The apartment needs some updates.",
+    "privateReview": "Furniture is worn, paint chipping in bathroom.",
+    "reply": null,
+    "rating": 6.0,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 7 },
+      { "categoryName": "Communication", "categoryValue": 8 },
+      { "categoryName": "Location", "categoryValue": 7 },
+      { "categoryName": "Value", "categoryValue": 5 },
+      { "categoryName": "Amenities", "categoryValue": 6 }
+    ],
+    "submittedAt": "2024-12-10 12:30:00",
+    "replyTime": null,
+    "status": "pending",
+    "type": "guest-to-host"
+  },
+  {
+    "id": 1007,
+    "reservationId": 5007,
+    "guestName": "Amanda Martinez",
+    "publicReview": "Fantastic guest experience! Amanda was friendly, clean, and a pleasure to host. Highly recommend!",
+    "privateReview": null,
+    "reply": null,
+    "rating": 10,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 10 },
+      { "categoryName": "Communication", "categoryValue": 10 },
+      { "categoryName": "House Rules", "categoryValue": 10 }
+    ],
+    "submittedAt": "2024-12-09 15:40:00",
+    "replyTime": null,
+    "status": "published",
+    "type": "host-to-guest"
+  },
+  {
+    "id": 1008,
+    "reservationId": 5008,
+    "guestName": "Robert Brown",
+    "publicReview": "Perfect location in the heart of the city. Easy check-in process and host was very accommodating with our late arrival.",
+    "privateReview": null,
+    "reply": "Thanks Robert! Glad we could accommodate your schedule. Come back anytime!",
+    "rating": 9.0,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 9 },
+      { "categoryName": "Communication", "categoryValue": 10 },
+      { "categoryName": "Location", "categoryValue": 10 },
+      { "categoryName": "Value", "categoryValue": 8 }
+    ],
+    "submittedAt": "2024-12-08 11:15:00",
+    "replyTime": "2024-12-08 14:20:00",
+    "status": "published",
+    "type": "guest-to-host"
+  },
+  {
+    "id": 1009,
+    "reservationId": 5009,
+    "guestName": "Jennifer Lee",
+    "publicReview": "Good guest overall, followed house rules and was respectful of the property.",
+    "privateReview": null,
+    "reply": null,
+    "rating": 8.5,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 8 },
+      { "categoryName": "Communication", "categoryValue": 9 },
+      { "categoryName": "House Rules", "categoryValue": 9 }
+    ],
+    "submittedAt": "2024-12-07 13:25:00",
+    "replyTime": null,
+    "status": "published",
+    "type": "host-to-guest"
+  },
+  {
+    "id": 1010,
+    "reservationId": 5010,
+    "guestName": "Christopher Davis",
+    "publicReview": "Unfortunately had several issues during our stay. Water heater stopped working on day 2, and it took over 24 hours to fix. Host was apologetic but the inconvenience was significant.",
+    "privateReview": "Very frustrated with the maintenance response time. Expected better for the price.",
+    "reply": null,
+    "rating": 4.5,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 7 },
+      { "categoryName": "Communication", "categoryValue": 6 },
+      { "categoryName": "Location", "categoryValue": 8 },
+      { "categoryName": "Value", "categoryValue": 3 },
+      { "categoryName": "Amenities", "categoryValue": 3 }
+    ],
+    "submittedAt": "2024-12-06 17:50:00",
+    "replyTime": null,
+    "status": "pending",
+    "type": "guest-to-host"
+  },
+  {
+    "id": 1011,
+    "reservationId": 5011,
+    "guestName": "Patricia Taylor",
+    "publicReview": "Excellent guest! Very tidy, respectful, and great communication throughout. Would love to host again.",
+    "privateReview": null,
+    "reply": null,
+    "rating": 9.7,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 10 },
+      { "categoryName": "Communication", "categoryValue": 10 },
+      { "categoryName": "House Rules", "categoryValue": 9.5 }
+    ],
+    "submittedAt": "2024-12-05 10:10:00",
+    "replyTime": null,
+    "status": "published",
+    "type": "host-to-guest"
+  },
+  {
+    "id": 1012,
+    "reservationId": 5012,
+    "guestName": "Daniel Anderson",
+    "publicReview": "The apartment was clean and well-maintained. Great value for money. Would definitely stay again.",
+    "privateReview": "Only small issue was street noise at night, but manageable with earplugs.",
+    "reply": "Thanks Daniel! We appreciate your feedback about the noise. We've added blackout curtains which help with sound insulation.",
+    "rating": 8.3,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 9 },
+      { "categoryName": "Communication", "categoryValue": 9 },
+      { "categoryName": "Location", "categoryValue": 8 },
+      { "categoryName": "Value", "categoryValue": 9 },
+      { "categoryName": "Amenities", "categoryValue": 7 }
+    ],
+    "submittedAt": "2024-12-04 14:35:00",
+    "replyTime": "2024-12-05 09:00:00",
+    "status": "published",
+    "type": "guest-to-host"
+  }
+]
