@@ -69,12 +69,15 @@
 
 **Filtering Logic:**
 ```typescript
-// Only shows approved guest reviews
+// Only shows approved guest reviews (guest-to-host type)
+// Host reviews (host-to-guest type) are for internal dashboard use only
 r.listingId === id &&
 r.isApprovedForPublic &&
 r.type === 'guest-to-host' &&
-r.status === 'published'
+(r.status === 'published' || r.status === 'approved')
 ```
+
+**Note:** See `.github/REVIEW_TYPES.md` for detailed clarification on review types.
 
 **Star Rating Display:**
 - Converts 0-10 scale to 5-star display

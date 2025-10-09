@@ -2,6 +2,8 @@
   {
     "id": 1001,
     "reservationId": 5001,
+    "listingId": "1",
+    "listingName": "Downtown Loft A",
     "guestName": "Sarah Johnson",
     "publicReview": "Amazing property! The location was perfect and the apartment was spotlessly clean. Host was very responsive and helpful throughout our stay.",
     "privateReview": "Everything was perfect, no issues at all.",
@@ -21,6 +23,8 @@
   {
     "id": 1002,
     "reservationId": 5002,
+    "listingId": "1",
+    "listingName": "Downtown Loft A",
     "guestName": "Michael Chen",
     "publicReview": "Great guest! Left the apartment in excellent condition and followed all house rules. Would welcome back anytime.",
     "privateReview": null,
@@ -39,6 +43,8 @@
   {
     "id": 1003,
     "reservationId": 5003,
+    "listingId": "2",
+    "listingName": "Riverside Studio B",
     "guestName": "Emma Rodriguez",
     "publicReview": "Nice place overall, but had some minor issues with the heating. Location is convenient for downtown.",
     "privateReview": "Heating thermostat was difficult to adjust.",
@@ -59,6 +65,8 @@
   {
     "id": 1004,
     "reservationId": 5004,
+    "listingId": "2",
+    "listingName": "Riverside Studio B",
     "guestName": "David Park",
     "publicReview": "Wonderful guest, very respectful and communicative. Apartment was left in pristine condition.",
     "privateReview": null,
@@ -77,6 +85,8 @@
   {
     "id": 1005,
     "reservationId": 5005,
+    "listingId": "3",
+    "listingName": "Garden View Apartment C",
     "guestName": "Lisa Thompson",
     "publicReview": "Beautiful apartment with stunning views! Everything was as described. The kitchen was well-equipped and the bed was very comfortable.",
     "privateReview": "Minor issue: wifi password wasn't in the welcome guide, had to ask host.",
@@ -97,6 +107,8 @@
   {
     "id": 1006,
     "reservationId": 5006,
+    "listingId": "3",
+    "listingName": "Garden View Apartment C",
     "guestName": "James Wilson",
     "publicReview": "Decent stay but felt a bit overpriced for what was offered. The apartment needs some updates.",
     "privateReview": "Furniture is worn, paint chipping in bathroom.",
@@ -117,6 +129,8 @@
   {
     "id": 1007,
     "reservationId": 5007,
+    "listingId": "4",
+    "listingName": "Skyline Penthouse D",
     "guestName": "Amanda Martinez",
     "publicReview": "Fantastic guest experience! Amanda was friendly, clean, and a pleasure to host. Highly recommend!",
     "privateReview": null,
@@ -135,6 +149,8 @@
   {
     "id": 1008,
     "reservationId": 5008,
+    "listingId": "4",
+    "listingName": "Skyline Penthouse D",
     "guestName": "Robert Brown",
     "publicReview": "Perfect location in the heart of the city. Easy check-in process and host was very accommodating with our late arrival.",
     "privateReview": null,
@@ -154,6 +170,8 @@
   {
     "id": 1009,
     "reservationId": 5009,
+    "listingId": "5",
+    "listingName": "Cozy Corner Suite E",
     "guestName": "Jennifer Lee",
     "publicReview": "Good guest overall, followed house rules and was respectful of the property.",
     "privateReview": null,
@@ -172,6 +190,8 @@
   {
     "id": 1010,
     "reservationId": 5010,
+    "listingId": "5",
+    "listingName": "Cozy Corner Suite E",
     "guestName": "Christopher Davis",
     "publicReview": "Unfortunately had several issues during our stay. Water heater stopped working on day 2, and it took over 24 hours to fix. Host was apologetic but the inconvenience was significant.",
     "privateReview": "Very frustrated with the maintenance response time. Expected better for the price.",
@@ -192,6 +212,8 @@
   {
     "id": 1011,
     "reservationId": 5011,
+    "listingId": "1",
+    "listingName": "Downtown Loft A",
     "guestName": "Patricia Taylor",
     "publicReview": "Excellent guest! Very tidy, respectful, and great communication throughout. Would love to host again.",
     "privateReview": null,
@@ -210,6 +232,8 @@
   {
     "id": 1012,
     "reservationId": 5012,
+    "listingId": "1",
+    "listingName": "Downtown Loft A",
     "guestName": "Daniel Anderson",
     "publicReview": "The apartment was clean and well-maintained. Great value for money. Would definitely stay again.",
     "privateReview": "Only small issue was street noise at night, but manageable with earplugs.",
@@ -224,6 +248,69 @@
     ],
     "submittedAt": "2024-12-04 14:35:00",
     "replyTime": "2024-12-05 09:00:00",
+    "status": "published",
+    "type": "guest-to-host"
+  },
+  {
+    "id": 1013,
+    "reservationId": 5013,
+    "listingId": "2",
+    "listingName": "Riverside Studio B",
+    "guestName": "Sophie Williams",
+    "publicReview": "Charming studio with beautiful river views! Perfect for a solo traveler or couple. Very peaceful location.",
+    "privateReview": null,
+    "reply": "Thank you Sophie! We're so glad you enjoyed the riverside location.",
+    "rating": 9.2,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 9 },
+      { "categoryName": "Communication", "categoryValue": 10 },
+      { "categoryName": "Location", "categoryValue": 10 },
+      { "categoryName": "Value", "categoryValue": 9 }
+    ],
+    "submittedAt": "2024-12-03 16:20:00",
+    "replyTime": "2024-12-04 08:30:00",
+    "status": "published",
+    "type": "guest-to-host"
+  },
+  {
+    "id": 1014,
+    "reservationId": 5014,
+    "listingId": "3",
+    "listingName": "Garden View Apartment C",
+    "guestName": "Marcus Johnson",
+    "publicReview": "Outstanding guest! Respectful, clean, and excellent communicator. Highly recommend.",
+    "privateReview": null,
+    "reply": null,
+    "rating": 10,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 10 },
+      { "categoryName": "Communication", "categoryValue": 10 },
+      { "categoryName": "House Rules", "categoryValue": 10 }
+    ],
+    "submittedAt": "2024-12-02 11:45:00",
+    "replyTime": null,
+    "status": "published",
+    "type": "host-to-guest"
+  },
+  {
+    "id": 1015,
+    "reservationId": 5015,
+    "listingId": "4",
+    "listingName": "Skyline Penthouse D",
+    "guestName": "Olivia Martinez",
+    "publicReview": "Absolutely stunning penthouse! The views are breathtaking and the space is incredibly luxurious. Perfect for a special occasion.",
+    "privateReview": null,
+    "reply": "Thank you Olivia! We're thrilled you loved the penthouse. Hope to host you again!",
+    "rating": 10,
+    "reviewCategory": [
+      { "categoryName": "Cleanliness", "categoryValue": 10 },
+      { "categoryName": "Communication", "categoryValue": 10 },
+      { "categoryName": "Location", "categoryValue": 10 },
+      { "categoryName": "Value", "categoryValue": 9 },
+      { "categoryName": "Amenities", "categoryValue": 10 }
+    ],
+    "submittedAt": "2024-12-01 19:30:00",
+    "replyTime": "2024-12-02 09:00:00",
     "status": "published",
     "type": "guest-to-host"
   }

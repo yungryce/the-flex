@@ -47,9 +47,11 @@ Deliverables:
 - Key design and logic decisions
 - API behaviors
 - Google Reviews findings (if any)
+
 5. API Access
 Account ID: 61148
 API Key: f94377ebbbb479490bb3ec364649168dc443dda2e4830facaf5de2e74ccc9152
+
 6. Important Notes
 Access to sandbox Hostaway API will be provided.
 Mock review data has been shared separately.

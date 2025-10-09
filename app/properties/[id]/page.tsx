@@ -10,22 +10,33 @@ interface PropertyPageProps {
 
 export default function PropertyPage({ params }: PropertyPageProps) {
   const [propertyId, setPropertyId] = useState<string>('');
+  const [property, setProperty] = useState<any>(null);
   const [reviews, setReviews] = useState<NormalizedReview[]>([]);
-  const [hostReplies, setHostReplies] = useState<NormalizedReview[]>([]);
   const [loading, setLoading] = useState(true);
   const [expandedReviews, setExpandedReviews] = useState<Set<number>>(new Set());
   const [showAllReviews, setShowAllReviews] = useState(false);
 
   useEffect(() => {
-    params.then((p) => {
+    params.then(async (p) => {
       setPropertyId(p.id);
-      fetchApprovedReviews(p.id);
+      await fetchPropertyAndReviews(p.id);
     });
   }, [params]);
 
-  async function fetchApprovedReviews(id: string) {
+  async function fetchPropertyAndReviews(id: string) {
     try {
       setLoading(true);
+      
+      // Fetch property details from mock API
+      const propRes = await fetch(`/api/properties/hostaway/${id}`);
+      if (propRes.ok) {
+        const propData = await propRes.json();
+        if (propData.success) {
+          setProperty(propData.data);
+        }
+      }
+      
+      // Fetch reviews
       const response = await fetch('/api/reviews/hostaway');
       if (!response.ok) {
         throw new Error('Failed to fetch reviews');
@@ -50,31 +61,28 @@ export default function PropertyPage({ params }: PropertyPageProps) {
       }));
       
       // Filter for this property:
-      // 1. Guest reviews: published OR approved, AND approved for public
-      // 2. Host replies: Link to guest reviews later
+      // Show ALL reviews for this property (both guest and host reviews)
+      // Only show approved guest reviews; host reviews are always shown
       const propertyReviews = reviewsWithApprovals.filter(
-        (r) =>
-          r.listingId === id &&
-          r.isApprovedForPublic &&
-          r.type === 'guest-to-host' &&
-          (r.status === 'published' || r.status === 'approved')
-      );
-      
-      // Get host replies for these guest reviews
-      const guestReviewIds = new Set(propertyReviews.map((r) => r.id));
-      const replies = reviewsWithApprovals.filter(
-        (r) =>
-          r.type === 'host-to-guest' &&
-          r.replyToReviewId &&
-          guestReviewIds.has(r.replyToReviewId) &&
-          r.isApprovedForPublic &&
-          (r.status === 'published' || r.status === 'approved')
+        (r) => {
+          if (r.listingId !== id) return false;
+          
+          // Host reviews (host-to-guest): always show if published
+          if (r.type === 'host-to-guest') {
+            return r.status === 'published';
+          }
+          
+          // Guest reviews (guest-to-host): only show if approved for public
+          return (
+            r.isApprovedForPublic &&
+            (r.status === 'published' || r.status === 'approved')
+          );
+        }
       );
       
       setReviews(propertyReviews);
-      setHostReplies(replies);
     } catch (err) {
-      console.error('Error fetching reviews:', err);
+      console.error('Error fetching data:', err);
     } finally {
       setLoading(false);
     }
@@ -240,9 +248,6 @@ export default function PropertyPage({ params }: PropertyPageProps) {
                       const displayText = isExpanded || !shouldTruncate
                         ? review.publicReview
                         : review.publicReview.slice(0, 200) + '...';
-                      
-                      // Find host reply for this guest review
-                      const hostReply = hostReplies.find((r) => r.replyToReviewId === review.id);
 
                       return (
                         <div key={review.id} className="pb-6 border-b last:border-0" style={{ borderColor: 'rgb(220, 220, 220)' }}>
@@ -280,31 +285,10 @@ export default function PropertyPage({ params }: PropertyPageProps) {
                           {shouldTruncate && (
                             <button
                               onClick={() => toggleReviewExpand(review.id)}
-                              className="underline text-sm mb-3"
+                              className="underline text-sm"
                             >
                               {isExpanded ? 'Hide' : 'Show more'}
                             </button>
-                          )}
-
-                          {/* Host Reply (Threaded/Indented) */}
-                          {hostReply && (
-                            <div className="mt-4 ml-8 pl-4 border-l-2" style={{ borderColor: 'rgb(220, 220, 220)' }}>
-                              <div className="flex items-center gap-2 mb-2 text-sm">
-                                <span className="font-semibold" style={{ color: 'rgb(22, 79, 76)' }}>
-                                  Host Response
-                                </span>
-                                <span className="text-gray-500">·</span>
-                                <span className="text-gray-500">
-                                  {new Date(hostReply.submittedAt).toLocaleDateString('en-US', {
-                                    month: 'long',
-                                    year: 'numeric',
-                                  })}
-                                </span>
-                              </div>
-                              <p className="text-gray-700 leading-relaxed text-sm">
-                                {hostReply.publicReview}
-                              </p>
-                            </div>
                           )}
                         </div>
                       );

@@ -11,8 +11,8 @@ import type { HostawayReview, NormalizedReview, CategoryRating } from '@/types/r
 export function normalizeHostawayReview(raw: HostawayReview): NormalizedReview {
   return {
     id: raw.id,
-    listingId: generateListingId(raw.reservationId),
-    listingName: generateListingName(raw.reservationId),
+    listingId: raw.listingId || generateListingId(raw.reservationId),
+    listingName: raw.listingName || generateListingName(raw.reservationId),
     guestName: raw.guestName,
     publicReview: raw.publicReview,
     type: raw.type,
@@ -20,11 +20,10 @@ export function normalizeHostawayReview(raw: HostawayReview): NormalizedReview {
     submittedAt: convertToISO(raw.submittedAt),
     averageRating: calculateAverageRating(raw),
     categoryRatings: normalizeCategoryRatings(raw.reviewCategory),
-    isApprovedForPublic: false, // Default to false; will be managed by approval system
+    isApprovedForPublic: false, // Default to false, dashboard can override
     source: 'hostaway',
     channel: raw.channel,
     reservationId: raw.reservationId,
-    // Host-to-guest reviews reference the guest review from the same reservation
     replyToReviewId: raw.type === 'host-to-guest' ? findGuestReviewId(raw.reservationId) : undefined,
   };
 }

@@ -43,6 +43,8 @@ export interface ReviewsResponse {
 export interface HostawayReview {
   id: number;
   reservationId: number;
+  listingId?: string; // Optional: provided in mock data
+  listingName?: string; // Optional: provided in mock data
   guestName: string;
   publicReview: string;
   privateReview: string | null;
@@ -85,4 +87,32 @@ export interface ReviewsQueryParams {
 export interface ApiErrorResponse {
   error: string;
   requestId?: string;
+}
+
+/**
+ * Property/Listing data structure
+ */
+export interface Property {
+  id: string;
+  name: string;
+  address: string;
+  city?: string;
+  country?: string;
+  imageUrl?: string | null;
+  bedrooms?: number;
+  bathrooms?: number;
+  accommodates?: number;
+  propertyType?: string;
+  // Dashboard stats (calculated)
+  reviewCount?: number;
+  avgRating?: number;
+  pendingCount?: number;
+}
+
+/**
+ * Property grouped with its reviews
+ */
+export interface PropertyGroup {
+  property: Property;
+  reviews: NormalizedReview[];
 }
